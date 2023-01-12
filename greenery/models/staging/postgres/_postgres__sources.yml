@@ -1,0 +1,39 @@
+version: 2
+
+sources:
+
+  - name: postgres # name of the source (this can be named whatever you want, but should be descriptive
+    schema: public # this is the schema our raw data lives in
+    database: raw # this is the name of our database
+
+    quoting:
+      database: false
+      schema: false
+      identifier: false
+
+    freshness:
+      warn_after: {count: 24, period: hour}
+      error_after: {count: 48, period: hour}
+
+    tables:
+      - name: events 
+        description: >
+          Events information.
+      - name: orders 
+        description: >
+          Order information.
+      - name: users 
+        description: >
+          User information.
+      - name: addresses 
+        description: >
+          Address information.
+      - name: products 
+        description: >
+          Product information.
+      - name: order_items 
+        description: >
+          Item information for individual orders.
+      - name: promos 
+        description: >
+          Promotion information.

@@ -1,0 +1,43 @@
+version: 2
+
+models:
+  - name: stg_addresses
+    description: Addresses for each user including street address, zip, state, and country.
+    columns:
+      - name: street_address
+        tests:
+          - not_null
+      - name: zipcode
+        tests: 
+          - not_null
+      - name: state
+        tests: 
+          - not_null
+      - name: country
+        tests: 
+          - not_null
+  - name: stg_events
+    description: Events each user/page visited, carted, checked out, and shipped.
+    columns:
+      - name: event_id
+        tests:
+          - not_null
+      - name: session_id
+        tests: 
+          - not_null
+      - name: user_id
+        tests: 
+          - not_null
+      - name: page_url
+        tests: 
+          - not_null
+      - name: created_at
+        tests: 
+          - not_null
+      - name: event_type
+        tests: 
+          - not_null
+      - name: order_id
+      - name: product_id
+  - name: stg_order_items
+    description: Items for each individual order.
