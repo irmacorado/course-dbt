@@ -16,6 +16,7 @@ models:
       - name: country
         tests: 
           - not_null
+      - name: full_address
   - name: stg_events
     description: Events each user/page visited, carted, checked out, and shipped.
     columns:
@@ -39,5 +40,9 @@ models:
           - not_null
       - name: order_id
       - name: product_id
+  - name: stg_orders 
+  - name: stg_products
+  - name: stg_promos
+  - name: stg_users
   - name: stg_order_items
     description: Items for each individual order.

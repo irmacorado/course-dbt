@@ -6,7 +6,7 @@
 
 SELECT
   product_id
-  , name
-  , price::float as price
-  , inventory::int as inventory
+  , name as product_name
+  , price::float as product_price
+  , inventory::int as product_inventory
 FROM {{ source('postgres', 'products') }}
