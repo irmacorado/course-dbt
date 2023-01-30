@@ -38,3 +38,7 @@ models:
       - name: add_to_cart 
       - name: checkout
       - name: package_shipped
+  - name: fact_conversions
+    description: Overall conversions, sessions, and conversion rate for every session ever.
+  - name: fact_product_conversions
+    description: Product converserions, sessions, and conversion rate for every session ever.

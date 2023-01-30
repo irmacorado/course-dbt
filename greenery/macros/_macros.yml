@@ -1,0 +1,14 @@
+version: 2
+
+macros:
+  - name: event_type_binary
+    description: 'converts an event type to a binary 1 if its the event name 0 if not.'
+    arguments:
+      - name: event_name
+        type: 'string'
+  - name: grant 
+    description: grant permissions on schemas and tables to role/user
+    arguments: 
+      - name: role 
+        type: string
+        description: the role/user to grant

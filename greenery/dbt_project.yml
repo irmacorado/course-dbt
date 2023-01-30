@@ -34,5 +34,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   greemery:
     # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    marts:
+      +post-hook:
+        - "{{ grant(role='reporting') }}"
